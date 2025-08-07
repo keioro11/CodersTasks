@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Inter;
+    box-sizing: border-box;
+    height: auto;
+}
+
+header {
+    padding: 10px;
+    display: flex;
+}
+
+nav {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(140, 139, 139);
+    border: 2px solid rgb(44, 43, 43);
+    border-radius: 15px;
+    gap: 20px;
+    padding-left: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav div {
+    width: auto;
+    height: auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: azure;
+}
+
+nav div:hover {
+    background-color: rgb(79, 78, 78);
+}
+
+main {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;.
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    gap: 50px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.grid-item {
+    background-color: rgb(175, 174, 174);
+    border-radius: 5px;
+    color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1.5px solid rgb(44, 43, 43);
+    font-size: large;
+
+}
+
+.grid-item:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.479);
+}
