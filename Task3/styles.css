@@ -67,7 +67,6 @@ main {
     align-items: center;
     border: 1.5px solid rgb(44, 43, 43);
     font-size: large;
-
 }
 
 .grid-item:hover {
