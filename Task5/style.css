@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.navbar {
+    background-color: whitesmoke;
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    gap: 40px;
+}
+
+img {
+    height: 40px;
+    display: flex;
+    align-self: center;
+}
+
+ul {
+    display: flex;
+    margin-right: 30px;
+}
+
+li {
+    padding: 10px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+form {
+    margin-right: 70px;
+}
+
+a {
+    color: black;
+}
+
+/* Styles for the main desktop menu */
+.main-menu-list {
+    display: flex; /* Always visible on desktop */
+    margin-right: 30px;
+    list-style: none;
+    padding: 0;
+}
+
+.main-menu-list li {
+    padding: 10px;
+}
+
+.main-menu-list li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.main-menu-list li a:hover {
+    background-color: #eee;
+}
+
+/* --- Mobile Dropdown Related Styles --- */
+
+/* Hide the hamburger icon and mobile dropdown by default (for desktop) */
+.dropdown-container {
+    position: relative; /* For absolute positioning of the dropdown menu */
+}
+
+.hamburger-icon {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px 10px;
+    color: black;
+}
+
+.dropdown-menu-mobile {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    position: absolute;
+    top: 100%; /* Position below the hamburger icon */
+    right: 0; /* Align to the right of the navbar */
+    min-width: 200px;
+    z-index: 1000;
+
+    /* Hide by default for mobile (will be toggled by JS) */
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown-menu-mobile li a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-menu-mobile li a:hover {
+    background-color: #f1f1f1;
+}
+
+/* --- Media Query: Hide main menu, show mobile dropdown trigger --- */
+@media (max-width: 768px) { /* Adjust this breakpoint as needed */
+    .menu {
+        display: none; /* Hide the entire desktop menu */
+    }
+
+    .hamburger-icon {
+        display: block; /* Show the hamburger icon */
+    }
+
+    /* Position the mobile dropdown at 50% from the left edge of the viewport */
+    .dropdown-menu-mobile {
+        left: 50vw; /* Positions its left edge at 50% of the viewport width */
+        transform: translateX(-50%); /* Centers it horizontally at the 50vw mark */
+        right: auto; /* Remove right alignment when using left/transform */
+    }
+}
